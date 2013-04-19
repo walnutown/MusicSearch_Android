@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.50"
+        android:paddingLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14sp" />
+     
+     <TextView
+        android:id="@+id/tvArtist"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:paddingLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:paddingLeft="10dp"
+        android:textSize="14sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:paddingLeft="10dp"
+        android:textSize="14sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+
+</LinearLayout>
