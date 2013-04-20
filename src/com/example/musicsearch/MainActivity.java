@@ -1,8 +1,10 @@
 package com.example.musicsearch;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -43,23 +45,35 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) 
 			{
-				// Initialize a new intent and send parameters to another activity
-				Intent intent = new Intent(MainActivity.this, MusicSearch.class);
-				intent.putExtra("type",spType.getSelectedItem().toString());
-				intent.putExtra("title", etTitle.getText().toString().trim());
-
-				startActivity(intent);
+				String type = spType.getSelectedItem().toString();
+				String title = etTitle.getText().toString().trim();
+				// if the title is null, display message
+				if (title.equals("") || title == null)
+				{
+					Dialog dialog = new Dialog(MainActivity.this);
+					dialog.setTitle("Enter something in the search box.");
+					dialog.show();
+				}
+				else
+				{
+					// Initialize a new intent and send parameters to another activity
+					Intent intent = new Intent(MainActivity.this, MusicSearch.class);
+					intent.putExtra("type", type);
+					intent.putExtra("title", title);
+					startActivity(intent);
+				}
 			}
 
 		});
 
 	}
 
-	//@Override
-	//	public boolean onCreateOptionsMenu(Menu menu) {
-	//		// Inflate the menu; this adds items to the action bar if it is present.
-	//		getMenuInflater().inflate(R.menu.main, menu);
-	//		return true;
-	//	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) 
+	{
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 
 }

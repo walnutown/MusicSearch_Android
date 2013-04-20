@@ -10,6 +10,9 @@
     <string name="loading">Loading&#8230;</string>
     <string name="post_caption">Post to Facebook</string>
     <string name="post_button">Facebook</string>
+    <string name="post_button_song">Sample Music</string>
+    <string name="app_id">525770427487496</string>
+    
     <string-array name="type_arrays">
         <item>artist</item>
         <item>album</item>

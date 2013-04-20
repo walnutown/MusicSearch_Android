@@ -15,16 +15,17 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.50"
-         android:paddingLeft="10dp"
+        android:paddingLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tvPerformer"
-       android:layout_width="50dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.25"
         android:textSize="14sp"
+        android:paddingLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     <TextView
         android:id="@+id/tvComposer"
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.25"
         android:textSize="14sp"
+        android:paddingLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
 

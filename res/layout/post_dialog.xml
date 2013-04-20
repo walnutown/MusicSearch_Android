@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
+   <!--  <TextView
         android:id="@+id/tvCaption_fb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,14 +13,14 @@
         android:layout_marginTop="16dp"
         android:text="@string/post_caption"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ff33b5e5" />
+        android:textColor="#ff33b5e5" /> -->
 
-    <View
+   <!--  <View
         android:id="@+id/view1"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:layout_marginTop="60dp"
-        android:background="#ff33b5e5" />
+        android:background="#ff33b5e5" /> -->
 
     <Button
         android:id="@+id/btnDialog"
@@ -28,7 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/view1"
         android:text="@string/post_button" />
 
 </RelativeLayout>
