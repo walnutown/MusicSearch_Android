@@ -372,8 +372,20 @@ public class MusicSearch extends Activity
 				Intent intent = getIntent();
 				type = intent.getExtras().getString("type");
 				title = intent.getExtras().getString("title");
-				urlStr = "http://cs-server.usc.edu:36710/examples/servlet/HelloWorldExample?title=" + URLEncoder.encode(title,"UTF-8") + "&type=" + type ;
-
+				
+				//deal with white space
+				String temp = "";
+				for (int i = 0; i < title.length(); i++) {
+					if (title.charAt(i) == ' ') {
+						temp += "%20";
+					} else {
+						temp += title.charAt(i);
+					}
+				}
+				title = temp;
+				
+				//urlStr = "http://cs-server.usc.edu:36710/examples/servlet/HelloWorldExample?title=" + URLEncoder.encode(title,"UTF-8") + "&type=" + type ;
+				urlStr = "http://cs-server.usc.edu:36710/examples/servlet/HelloWorldExample?title=" + title + "&type=" + type ;
 				//initialize http request, to get json stream
 				URL url = new URL(urlStr);
 				HttpURLConnection uc = (HttpURLConnection)url.openConnection();
